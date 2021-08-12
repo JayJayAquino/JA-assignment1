@@ -49,3 +49,9 @@ function darkMode() {
     var element = document.body;
     element.classList.toggle("dark-mode");
   }
+
+  $(window).scroll(function() {
+    if($(window).scrollTop() == $(document).height() - $(window).height()) {
+           generateUsers();
+    }
+});
