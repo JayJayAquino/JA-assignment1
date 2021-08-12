@@ -1,2 +1,5 @@
 # JA-assignment1
-MM LLC
+index.html is the webpage
+
+Click 'Generate Users' button to generate 100 random users
+Click 'Toggle Dark Mode" button to toggle dark mode
