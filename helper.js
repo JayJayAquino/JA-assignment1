@@ -9,22 +9,26 @@ function generateUsers(){
             description: randomString(50)
         }
 
-        var temp = document.createElement('div')
-        var br = document.createElement('br')
+        var temp = document.createElement('div');
+        var username_p = document.createElement('p')
+        var age_p = document.createElement('p')
+        var description_p = document.createElement('p')
 
         var img = document.createElement('img');
         img.src = result[i].image;
-        var username = document.createTextNode(result[i].username)
-        var age = document.createTextNode(result[i].age)
-        var description = document.createTextNode(result[i].description)
+        var username = document.createTextNode("Username: " + result[i].username)
+        var age = document.createTextNode("Age: " + result[i].age)
+        var description = document.createTextNode("Description: " + result[i].description)
         temp.appendChild(img)
-        // img.appendChild(document.createElement('br'))
-        temp.appendChild(username)
-        // username.appendChild(document.createElement('br'))
-        temp.appendChild(age)
-        // age.appendChild(document.createElement('br'))
-        temp.appendChild(description)
-        // description.appendChild(document.createElement('br'))
+
+        username_p.appendChild(username);
+        temp.appendChild(username_p)
+
+        age_p.appendChild(age);
+        temp.appendChild(age_p)
+
+        description_p.appendChild(description);
+        temp.appendChild(description_p)
 
 
         document.getElementById('master').appendChild(temp);
@@ -41,6 +45,7 @@ function randomString(length){
     return Math.random().toString(36).substring(2,length)
 }
 
-function add_img() { 
-    
-}
+function darkMode() {
+    var element = document.body;
+    element.classList.toggle("dark-mode");
+  }
